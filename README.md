@@ -31,7 +31,6 @@ Ele possui uma página inicial com informações pessoais e uma página de conta
 - Python  
 - Django  
 - HTML  
-- CSS  
 
 ---
 
@@ -44,12 +43,10 @@ Ele possui uma página inicial com informações pessoais e uma página de conta
 Acesse a pasta do projeto:
 
 bash
-Copiar código
 cd Biography
 Crie e ative um ambiente virtual (opcional, mas recomendado):
 
 bash
-Copiar código
 python -m venv venv
 # Linux / macOS
 source venv/bin/activate
@@ -58,17 +55,14 @@ venv\Scripts\activate
 Instale as dependências:
 
 bash
-Copiar código
 pip install -r requirements.txt
 Aplique as migrações:
 
 bash
-Copiar código
 python manage.py migrate
 Inicie o servidor:
 
 bash
-Copiar código
 python manage.py runserver
 Acesse no navegador:
 
