@@ -43,8 +43,9 @@
         }
 
         .card {
+            max-width: 600px; /* 🔹 deixa a caixa menor */
             background: rgba(255, 255, 255, 0.08);
-            padding: 40px;
+            padding: 25px;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             backdrop-filter: blur(10px);
@@ -61,39 +62,44 @@
             padding: 14px 28px;
             font-size: 1rem;
             font-weight: bold;
-            color: #1f1c2c;
-            background: #fff;
+            color: #fff;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
             border-radius: 30px;
             text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: #00c6ff;
-            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
         }
 
         footer {
             margin-top: 60px;
             font-size: 0.9rem;
-            opacity: 0.7;
+            opacity: 0.85;
+        }
+
+        /* Faz rolagem suave até o footer */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🚀 Bem-vindo ao Django</h1>
-        <p>Sua aplicação está rodando com sucesso!</p>
+        <h1>🚀 Bem-vindo a Minha Biografia Simples</h1>
+        <p>Codando hoje, automatizando o amanhã.</p>
     </header>
 
     <div class="card">
-        <h2>🔥 Primeira Página com Templates</h2>
-        <p>Este conteúdo está sendo renderizado a partir do <b>index.html</b> dentro de <b>templates/</b>.</p>
-        <a href="/admin" class="btn">Ir para o Admin</a>
+        <h2>Um pouco sobre mim:</h2>
+        <p>Me chamo Dhuan Souza Melo, atualmente cursando o 1º ano do Ensino Médio e com inglês em nível intermediário. Tenho grande interesse na área de programação e já tive experiências básicas com Django, FastAPI e automações utilizando Python e PyAutoGUI. Estou sempre buscando aprender novas tecnologias e melhorar minhas habilidades como desenvolvedor.</p>
+        
+        <!-- 🔹 Botão que leva até o rodapé -->
+        <a href="{% url 'contato' %}" class="btn">📩 Ir para Formas de Contato</a>
     </div>
-
-    <footer>
-        <p>Desenvolvido com ❤️ e Django</p>
     </footer>
 </body>
 </html>
